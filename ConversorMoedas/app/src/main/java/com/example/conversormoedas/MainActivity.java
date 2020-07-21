@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // mostra uma mensagem para preencher
                 Toast.makeText(this, this.getString(R.string.informe_valor), Toast.LENGTH_LONG).show();
             }else {
-
+                Double real = Double.valueOf(values);
+                this.mViewHolder.textDolar.setText(String.format("%.2f", (real / 4 )));
+                this.mViewHolder.textEuro.setText(String.format("%.2f", (real / 5 )));
             }
         }
     }
